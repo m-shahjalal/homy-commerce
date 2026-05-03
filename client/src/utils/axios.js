@@ -2,8 +2,8 @@ import axios from "axios";
 
 const url =
   process.env.NODE_ENV === "production"
-    ? "/api/"
-    : "http://localhost:4000/api/";
+    ? "https://ccom.onrender.com/api"
+    : "http://localhost:4000/api";
 
 const instance = axios.create({ baseURL: url });
 
