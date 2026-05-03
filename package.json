@@ -1,37 +1,37 @@
 {
-	"name": "mern-ecom",
-	"version": "1.0.0",
-	"description": "This is mernstack server api",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"server": "nodemon index.js",
-		"client": "npm start --prefix client",
-		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"build": "cd client && npm install && npm run build",
-		"vercel-build": "cd client && npm install && npm run build"
-	},
-	"author": "Shahjalal",
-	"license": "MIT",
-	"engines": {
-		"node": "24.x"
-	},
-	"dependencies": {
-		"bcryptjs": "^3.0.2",
-		"cloudinary": "^1.26.3",
-		"cors": "^2.8.5",
-		"dotenv": "^10.0.0",
-		"express": "^4.17.1",
-		"express-validator": "^6.12.1",
-		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^5.13.2",
-		"morgan": "^1.10.0",
-		"multer": "^1.4.2",
-		"stripe": "^8.168.0",
-		"winston": "^3.3.3"
-	},
-	"devDependencies": {
-		"concurrently": "^6.2.0",
-		"nodemon": "^2.0.12"
-	}
+  "name": "mern-ecom",
+  "version": "1.0.0",
+  "description": "This is mernstack server api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm install && npm run build",
+    "vercel-build": "cd client && pnpm install && NODE_OPTIONS=--openssl-legacy-provider pnpm run build"
+  },
+  "author": "Shahjalal",
+  "license": "MIT",
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^1.26.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "stripe": "^8.168.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  }
 }
