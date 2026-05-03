@@ -2,8 +2,8 @@ import axios from "axios";
 
 const url =
   process.env.NODE_ENV === "production"
-    ? "https://ccom.onrender.com/"
-    : "http://localhost:4000/";
+    ? "/api/"
+    : "http://localhost:4000/api/";
 
 const instance = axios.create({ baseURL: url });
 
@@ -18,7 +18,7 @@ instance.interceptors.request.use(
   (err) => {
     console.error(err);
     return Promise.reject(err);
-  }
+  },
 );
 
 export default instance;
