@@ -14,7 +14,7 @@
 	"author": "Shahjalal",
 	"license": "MIT",
 	"engines": {
-		"node": "18.x"
+		"node": "24.x"
 	},
 	"dependencies": {
 		"bcryptjs": "^3.0.2",
