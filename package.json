@@ -8,14 +8,10 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && npm install && npm run build",
-    "vercel-build": "cd client && pnpm install && NODE_OPTIONS=--openssl-legacy-provider pnpm run build"
+    "build": "cd client && pnpm install && NODE_OPTIONS=--openssl-legacy-provider pnpm run build"
   },
   "author": "Shahjalal",
   "license": "MIT",
-  "engines": {
-    "node": "24.x"
-  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cloudinary": "^1.26.3",
