@@ -1,7 +1,9 @@
 const multer = require('multer');
 const path = require('path');
 
-const uploadFolder = path.join(__dirname, '..', '..', 'uploads');
+const uploadFolder = process.env.VERCEL
+	? '/tmp'
+	: path.join(__dirname, '..', '..', 'uploads');
 
 const storage = multer.diskStorage({
 	destination: (_req, _file, cb) => {

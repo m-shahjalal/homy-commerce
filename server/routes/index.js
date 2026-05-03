@@ -29,6 +29,7 @@ const routes = [
 
 module.exports = (app) => {
 	routes.forEach((route) => {
-		app.use(route.path, route.router);
+		const path = route.path === '/' ? '/api' : `/api${route.path}`;
+		app.use(path, route.router);
 	});
 };
