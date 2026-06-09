@@ -82,7 +82,7 @@ admin.updateProduct = async (req, res, next) => {
 		const product = await Product.findOneAndUpdate(
 			{ _id: productId },
 			updateData,
-			{ new: true, useFindAndModify: false }
+			{ new: true }
 		);
 		res.status(201).json({ success: true, product });
 	} catch (e) {
