@@ -1,12 +1,6 @@
 const logger = require("../utils/logger");
 
 module.exports = (app) => {
-  app.use((req, res, next) => {
-    if (res.headersSent === true) {
-      logger.error("Header already sent to client");
-      next("Header already sent to client");
-    }
-  });
 
   app.use("/api", (req, res, next) => {
     let error = new Error("404 page not found");
@@ -26,6 +20,5 @@ module.exports = (app) => {
       });
       logger.error(error.message || "internal server error");
     }
-    next();
   });
 };
